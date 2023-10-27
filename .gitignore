@@ -1,8 +1,6 @@
 /venv/
 .idea
-Basics
 Dictionary
-Excercises
 Functions
 Lists
 Modules
@@ -11,4 +9,3 @@ StringMethods
 text
 try-except
 files
-
