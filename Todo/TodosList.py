@@ -1,4 +1,4 @@
-from Beginner.Projects.Todo import functions
+from Todo import functions
 import time
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
