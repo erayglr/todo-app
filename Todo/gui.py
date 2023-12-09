@@ -2,17 +2,19 @@ import PySimpleGUI as sq
 import functions
 import time
 
-sq.theme("DarkPurple4")
+sq.theme("DarkPurple")
 
 clock = sq.Text("", key="clock")
 label = sq.Text("Type in a to-do")
 input_box = sq.InputText(tooltip="Enter todo", key="todo")
-add_button = sq.Button("Add")
+add_button = sq.Button(size=2, image_source="add.png", mouseover_colors="LightBlue2", tooltip="Add Todo", key="Add")
 list_box = sq.Listbox(values=functions.get_todos(), key="todos",
                       enable_events=True, size=[45, 10])
 edit_button = sq.Button("Edit")
-complete_button = sq.Button("Complete")
+complete_button = sq.Button(size=5, image_source="complete.png", mouseover_colors="LightBlue2", tooltip="Complete Todo"
+                                                                                                        ,key="Complete")
 exit_button = sq.Button("Exit")
+
 window = sq.Window("My To-Do App",
                    layout=[[clock],
                            [label],
