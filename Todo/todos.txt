@@ -5,3 +5,4 @@ Print the pictures.
 Fix the floor.
 Buy grocery.
 eray
+clean the bag
