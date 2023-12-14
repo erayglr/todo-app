@@ -11,19 +11,20 @@ sq.theme("DarkPurple")
 
 clock = sq.Text("", key="clock")
 label = sq.Text("Type in a to-do")
-input_box = sq.InputText(tooltip="Enter todo", key="todo")
+input_box = sq.InputText(tooltip="Enter todo", key="todo",size=46)
 add_button = sq.Button("Add", size=10, key="Add")
 list_box = sq.Listbox(values=functions.get_todos(), key="todos",
                       enable_events=True, size=[45, 10])
-edit_button = sq.Button("Edit")
-complete_button = sq.Button("Complete")
+edit_button = sq.Button("Edit", size=10)
+complete_button = sq.Button("Complete", size=10)
 exit_button = sq.Button("Exit")
+col1 =[[input_box],[list_box]]
+col2 = [[add_button],[edit_button],[complete_button]]
 
 window = sq.Window("My To-Do App",
                    layout=[[clock],
                            [label],
-                           [input_box, add_button],
-                           [list_box, edit_button, complete_button],
+                           [sq.Column(col1),sq.Column(col2)],
                            [exit_button]],
                    font=("Helvetica", 15))
 while True:
